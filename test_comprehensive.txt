@@ -1,0 +1,28 @@
+// Variable declarations and assignments
+let x = 5;
+let y = 10;
+let result = 0;
+
+// Variable reassignment
+assign x = x + 1;
+assign y = y * 2;
+
+// If condition with else
+if (x > 5) {
+    assign result = x + y;
+} else {
+    assign result = x - y;
+}
+
+// While loop
+let counter = 0;
+while (counter < 3) {
+    assign result = result + counter;
+    assign counter = counter + 1;
+}
+
+// Function call
+call print(result);
+
+// Exit with result
+exit(result);

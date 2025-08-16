@@ -1,6 +1,6 @@
 from dataclasses import dataclass
 from enum import Enum, auto
-from typing import Optional
+from typing import Optional, List
 
 class NodeType(Enum):
     PROGRAM = auto()
@@ -11,6 +11,20 @@ class NodeType(Enum):
     PRINT_STMT = auto()
     LET_STMT = auto()
     IDENTIFIER = auto()
+    IF_STMT = auto()
+    VAR = auto()
+    ELSE_STMT = auto()
+    STRING_LIT = auto()
+    BOOL_LIT = auto()
+    WHILE_STMT = auto()
+    FOR_STMT = auto()
+    BREAK_STMT = auto()
+    CONTINUE_STMT = auto()
+    RETURN_STMT = auto()
+    FUNCTION_CALL = auto()
+    FUNCTION_DEF = auto()
+    ASSIGN_STMT = auto()
+    PROCESSOR_STMT = auto()
 
 @dataclass
 class ASTNode:
@@ -18,7 +32,14 @@ class ASTNode:
     value: Optional[str] = None
     left: Optional['ASTNode'] = None
     right: Optional['ASTNode'] = None
-
+    next_node: Optional['ASTNode'] = None
+    else_node: Optional['ASTNode'] = None
+    args: Optional[List['ASTNode']] = None
+    body: Optional['ASTNode'] = None
+    condition: Optional['ASTNode'] = None
+    increment: Optional['ASTNode'] = None
+    return_value: Optional['ASTNode'] = None
+    function_name: Optional[str] = None
 def print_ast(node: ASTNode, indent: int = 0):
     """Pretty print the AST"""
     if not node:

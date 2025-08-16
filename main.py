@@ -1,5 +1,6 @@
+import sys
 from lexer import lexer
-from parser import Parser
+from parser_1 import Parser
 from ast_lib import print_ast
 from code_generator import CodeGenerator
 
@@ -26,5 +27,4 @@ def main():
     print_ast(ast)
 
 if __name__ == "__main__":
-    import sys
     main()

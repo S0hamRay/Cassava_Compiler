@@ -1,0 +1,26 @@
+// Test all compiler features
+let a = 10;
+let b = 5;
+let sum = 0;
+
+// Test variable assignment and reassignment
+assign a = a + 2;
+assign b = b * 3;
+
+// Test if-else condition
+if (a > b) {
+    assign sum = a + b;
+} else {
+    assign sum = a - b;
+}
+
+// Test while loop
+let count = 0;
+while (count < 4) {
+    assign sum = sum + count;
+    assign count = count + 1;
+}
+
+// Test function calls (built-in functions)
+print(sum);
+exit(sum);

@@ -1,0 +1,21 @@
+let x = 5;
+let y = 10;
+let result = 0;
+
+assign x = x + 1;
+assign y = y * 2;
+
+if (x > 5) {
+    assign result = x + y;
+} else {
+    assign result = x - y;
+}
+
+let counter = 0;
+while (counter < 3) {
+    assign result = result + counter;
+    assign counter = counter + 1;
+}
+
+print(result);
+exit(result);
