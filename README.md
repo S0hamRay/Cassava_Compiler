@@ -4,32 +4,32 @@ A complete compiler implementation that translates a custom programming language
 
 ## Features
 
-### ✅ **Variable Assignment** - FULLY IMPLEMENTED
+### **Variable Assignment**
 - **LET statements**: `let x = 5;` - creates new variables with initial values
 - **ASSIGN statements**: `assign x = y + 1;` - modifies existing variables
 - Both support complex expressions on the right side
 - Variables are properly declared in assembly with initial values
 
-### ✅ **If Conditions** - FULLY IMPLEMENTED
+### **If Conditions**
 - **IF statements**: `if (condition) { ... } else { ... }`
 - Supports both then and else blocks
 - Proper condition parsing and branching
 - Nested statements within blocks
 - Comparison operators: `>`, `<`, `>=`, `<=`, `==`, `!=`
 
-### ✅ **While Loops** - FULLY IMPLEMENTED
+### **While Loops**
 - **WHILE statements**: `while (condition) { ... }`
 - Proper loop condition evaluation
 - Loop body execution with multiple statements
 - Jump-based control flow for efficient loops
 
-### ✅ **Function Calls** - FULLY IMPLEMENTED
+### **Function Calls**
 - **Built-in functions**: `print(value)`, `exit(value)`
 - Support for function arguments
 - Proper argument parsing and evaluation
 - Assembly code generation for function calls
 
-### ✅ **Expressions** - FULLY IMPLEMENTED
+### **Expressions**
 - Arithmetic operations: `+`, `-`, `*`, `/`
 - Comparison operations: `>`, `<`, `>=`, `<=`, `==`, `!=`
 - Logical operations: `&&`, `||`, `!`
@@ -153,8 +153,8 @@ ld -m elf_i386 output.o -o output
 
 The compiler generates x86 assembly code with:
 - Proper variable declarations in `.data` section
-- Efficient register usage
-- Correct control flow with labels and jumps
+- Register usage as efficient as I could manage
+- Interpretable control flow with labels and jumps
 - System call integration for I/O and program exit
 
 ## Future Enhancements
@@ -165,13 +165,6 @@ The compiler generates x86 assembly code with:
 - Optimizations and code analysis
 - Support for more target architectures
 
-## Contributing
-
-This is a learning project demonstrating compiler design principles. Feel free to:
-- Add new language features
-- Improve error handling
-- Optimize code generation
-- Add more test cases
 
 ## License
 
